@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ministagram - Creator Upload</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<body>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="/frontend/index.html">Home</a></li>
+      <li><a href="/frontend/creator/creator-dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+  <h1>Creator Upload</h1>
+
+  <form id="uploadForm">
+    <input type="text" name="title" placeholder="Title" required><br><br>
+    <textarea name="caption" placeholder="Caption" required></textarea><br><br>
+    <input type="text" name="location" placeholder="Location"><br><br>
+    <input type="text" name="people" placeholder="People (comma-separated)"><br><br>
+    <input type="file" name="mediaFile" accept="image/,video/" required><br><br>
+    <button type="submit">Upload Media</button>
+  </form>
+
+  <p id="statusMessage"></p>
+
+  <script src="js/creator.js"></script>
+</body>
+</html>

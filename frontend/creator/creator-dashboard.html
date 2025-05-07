@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creator Dashboard | Ministagram</title>
+  <link rel="stylesheet" href="creator-dashboard.css">
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="/frontend/index.html">Home</a></li>
+      <li><a href="/frontend/creator.html">Upload</a></li>
+      
+    </ul>
+    <h1>Ministagram Creator Dashboard</h1>
+  </nav>
+    
+  </nav>
+
+  <!-- Delete Media Button -->
+  <div class="dashboard-actions">
+    <button id="deleteMediaBtn">🗑️ Delete Media</button>
+  </div>
+
+  <section class="stats">
+    <div class="card">
+      <h2>Total Uploads</h2>
+      <p id="total-uploads"></p>
+    </div>
+    <div class="card">
+      <h2>Views</h2>
+      <p id="total-views"></p>
+    </div>
+    <div class="card">
+      <h2>Likes</h2>
+      <p id="total-likes"></p>
+    </div>
+  </section>
+
+  <section class="recent-uploads">
+    <h2>Recent Uploads</h2>
+    <div class="grid" id="uploads-grid">
+      <!-- Media thumbnails will be dynamically inserted here -->
+    </div>
+  </section>
+
+  <script src="../js/creator-dashboard.js"></script>
+
+  <!-- Modal for media details -->
+  <!--<div id="mediaModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-caption"></p>
+    </div>
+  </div> -->
+
+  <!-- New Media Details Modal -->
+<div id="mediaDetailsModal" class="modal">
+  <div class="modal-content">
+    <span id="closeDetailsModal" class="close">&times;</span>
+    <h2 id="details-title"></h2>
+    <img id="details-image" src="" alt="Media preview">
+    <p><strong>Caption:</strong> <span id="details-caption"></span></p>
+    <p><strong>Location:</strong> <span id="details-location"></span></p>
+    <p><strong>People:</strong> <span id="details-people"></span></p>
+  </div>
+</div>
+
+</body>
+</html>
