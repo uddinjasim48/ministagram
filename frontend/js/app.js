@@ -1,5 +1,5 @@
 let allMedia = []; // Store fetched media globally
-let itemsPerPage = 6;
+let itemsPerPage = 4;
 let currentPage = 1;
 // Increment view count
 async function incrementViewCount(mediaId) {
@@ -48,7 +48,6 @@ async function fetchMedia() {
       const response = await fetch(`http://127.0.0.1:5000/api/media/all`);
       const mediaList = await response.json();
       allMedia = mediaList;
-      console.log('Media fetched:', mediaList);
       renderGallery(mediaList, currentPage);
     } catch (error) {
       console.error('Error fetching media:', error);
