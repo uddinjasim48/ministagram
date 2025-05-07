@@ -12,7 +12,6 @@ function updateStats(mediaList) {
   document.getElementById('total-likes').textContent = totalLikes;
 }
 
-
 // === 1. Delete media by ID (calls backend API) ===
 async function deleteMediaById(mediaId) {
   try {
@@ -40,7 +39,6 @@ async function fetchCreatorMedia() {
     console.error('Error fetching creator media:', error);
   }
 }
-
 
 // === 3. Render media items on dashboard ===
 function displayMedia(mediaList) {

@@ -1,6 +1,8 @@
 let allMedia = []; // Store fetched media globally
+
 let itemsPerPage = 4;
 let currentPage = 1;
+
 // Increment view count
 async function incrementViewCount(mediaId) {
   try {
@@ -43,6 +45,7 @@ function setupSearch() {
     renderGallery(filtered);
   });
 }
+
 async function fetchMedia() {
     try {
       const response = await fetch(`http://127.0.0.1:5000/api/media/all`);
@@ -110,6 +113,8 @@ async function fetchMedia() {
       loadMoreBtn.style.display = 'block';
     }
   }
+
+  
   function setupModal() {
     const modal = document.getElementById('mediaModal');
     const span = document.getElementsByClassName('close')[0];

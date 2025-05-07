@@ -17,7 +17,7 @@ exports.uploadMedia = async (req, res) => {
     try {
       // Generate unique filename
       const fileExtension = req.file.originalname.split('.').pop();
-      const blobName = '${uuidv4()}.${fileExtension}';
+      const blobName = `${uuidv4()}.${fileExtension}`;
       const blockBlobClient = containerClient.getBlockBlobClient(blobName);
   
       // Upload file buffer to Azure Blob

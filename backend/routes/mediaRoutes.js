@@ -1,4 +1,3 @@
-// backend/routes/mediaRoutes.js
 const express = require('express');
 const router = express.Router();
 const mediaController = require('../controllers/mediaController');
@@ -36,6 +35,7 @@ router.delete('/:id', async (req, res) => {
     const item = resources[0];
     console.log('Deleting item:', item);
 
+    //Delete the item usin id and partition key
     await container.item(item.id, item.id).delete();
 
     res.json({ message: 'Media deleted successfully' });
@@ -45,8 +45,8 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-
 module.exports = router;
+
 // === Increment view count ===
 router.post('/api/media/:id/view', async (req, res) => {
   const mediaId = req.params.id;
@@ -62,6 +62,7 @@ router.post('/api/media/:id/view', async (req, res) => {
     media.views = 0;
   }
   
+  // Add field of missing
   media.views += 1;
   await container.items.upsert(media);
   
