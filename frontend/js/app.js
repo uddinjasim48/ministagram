@@ -1,6 +1,6 @@
 let allMedia = []; // Store fetched media globally
 
-let itemsPerPage = 4;
+let itemsPerPage = 5;
 let currentPage = 1;
 
 // Increment view count
